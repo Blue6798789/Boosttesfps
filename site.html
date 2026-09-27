@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostez vos Performances</title>
+    <style>
+        /* Réinitialisation et base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d0d12;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Arrière-plan animé */
+        .background-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.2) 0%, rgba(13, 13, 18, 1) 70%);
+            z-index: -1;
+        }
+
+        /* Animations */
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Titre principal */
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 0 20px;
+            animation: fadeDown 1s ease-out;
+            background: linear-gradient(to right, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+            animation: fadeDown 1s ease-out 0.2s both;
+        }
+
+        /* Conteneur des cartes */
+        .cards-container {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeUp 1s ease-out 0.4s both;
+        }
+
+        /* Design des fenêtres/cartes */
+        .card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            width: 320px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            border-color: #4facfe;
+            box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #f8fafc;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        /* Boutons de téléchargement */
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #000000;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(79, 172, 254, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <h1>Boostez votre connexion n'importe quand</h1>
+    <p class="subtitle">Des performances optimales en un seul clic.</p>
+
+    <div class="cards-container">
+        <!-- Fenêtre Boost FPS -->
+        <div class="card">
+            <div class="card-icon">🚀</div>
+            <h2>Boostez vos FPS</h2>
+            <p>Téléchargez ce patch pour optimiser votre machine, gagner en fluidité et maximiser vos FPS en jeu.</p>
+            <!-- Remplace "Boost-FPS" par le vrai nom de ton fichier -->
+            <a href="BoostFPS.zip" download class="download-btn">Télécharger</a>
+        </div>
+
+        <!-- Fenêtre Boost Connexion -->
+        <div class="card">
+            <div class="card-icon">⚡</div>
+            <h2>Boost Connexion</h2>
+            <p>Réduisez votre ping, stabilisez votre réseau et profitez d'une expérience de jeu sans latence.</p>
+            <!-- Remplace "Boost-Connexion" par le vrai nom de ton fichier -->
+            <a href="Boost-Connexion.zip" download class="download-btn">Télécharger</a>
+        </div>
+    </div>
+</body>
+</html>
